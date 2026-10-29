@@ -1,4 +1,4 @@
-import { contentOf } from '@/addon/annotations/adapter/annotation-format';
+import { contentOf } from '@/addon/annotation/adapter/annotation-format';
 import { quoted, requestCommand } from '@/ontobdc/shared/adapter/command-request';
 import { eventBus, type AppEvent } from '@/ontobdc/shared/adapter/event-bus';
 import { ContainerFileRepository } from '@/ontobdc/shared/adapter/container-file-repository';

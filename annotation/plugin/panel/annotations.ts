@@ -1,12 +1,12 @@
-import { ANNOTATION_ENTITY_TYPE, annotationDataset } from '@/addon/annotations/adapter/annotation-dataset';
-import { groupLabel, isClosed } from '@/addon/annotations/adapter/annotation-format';
+import { ANNOTATION_ENTITY_TYPE, annotationDataset } from '@/addon/annotation/adapter/annotation-dataset';
+import { groupLabel, isClosed } from '@/addon/annotation/adapter/annotation-format';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 import { documentImageRenderer } from '@/ontobdc/shared/adapter/document-image';
 import { DRAW_ICON, EXPORT_ICON, NEW_ICON, OPEN_ICON } from '@/ontobdc/shared/adapter/menu-icons';
 import { createMoreMenu } from '@/ontobdc/shared/adapter/more-menu';
 import { ContainerRepository } from '@/ontobdc/shared/adapter/container-repository';
 import type { Mountable } from '@/ontobdc/shared/adapter/view';
-import type { AnnotationGroup, AnnotationItem } from '@/addon/annotations/domain/model/annotation';
+import type { AnnotationGroup, AnnotationItem } from '@/addon/annotation/domain/model/annotation';
 import { applyTranslations, getLocale, onLocaleChange, translate } from '@/ontobdc/shared/plugin/i18n';
 
 const SOURCE = 'annotations';

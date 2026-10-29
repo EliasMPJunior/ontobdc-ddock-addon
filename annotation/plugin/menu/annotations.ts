@@ -1,6 +1,6 @@
 import type { MenuEntry } from '@/ontobdc/shared/adapter/menu';
-import '@/addon/annotations/plugin/asset/annotations.css';
-import makeAnnotations from '@/addon/annotations/plugin/panel/annotations';
+import '@/addon/annotation/plugin/asset/annotations.css';
+import makeAnnotations from '@/addon/annotation/plugin/panel/annotations';
 
 const annotationsMenu: MenuEntry = {
   id: 'annotations',

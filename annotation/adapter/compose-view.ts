@@ -1,5 +1,5 @@
-import { drawGeometries } from '@/addon/annotations/adapter/geometry-render';
-import type { SavedGeometry } from '@/addon/annotations/domain/model/geometry-tool';
+import { drawGeometries } from '@/addon/annotation/adapter/geometry-render';
+import type { SavedGeometry } from '@/addon/annotation/domain/model/geometry-tool';
 
 const SVG = 'http://www.w3.org/2000/svg';
 

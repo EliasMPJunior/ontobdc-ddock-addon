@@ -1,4 +1,4 @@
-import { annotationDataset } from '@/addon/annotations/adapter/annotation-dataset';
+import { annotationDataset } from '@/addon/annotation/adapter/annotation-dataset';
 import { ContainerFileRepository } from '@/ontobdc/shared/adapter/container-file-repository';
 import { ContainerRepository } from '@/ontobdc/shared/adapter/container-repository';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';

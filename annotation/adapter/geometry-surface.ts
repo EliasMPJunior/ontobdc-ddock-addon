@@ -1,4 +1,4 @@
-import type { GeometryStyle, SavedGeometry, Shape } from '@/addon/annotations/domain/model/geometry-tool';
+import type { GeometryStyle, SavedGeometry, Shape } from '@/addon/annotation/domain/model/geometry-tool';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 
 const SOURCE = 'annotations_geometry_surface';

@@ -1,7 +1,7 @@
-import type { GeometryStyle, SavedGeometry, ShapeRequest } from '@/addon/annotations/domain/model/geometry-tool';
+import type { GeometryStyle, SavedGeometry, ShapeRequest } from '@/addon/annotation/domain/model/geometry-tool';
 import { quoted } from '@/ontobdc/shared/adapter/command-request';
 import { unwrapCliText } from '@/ontobdc/shared/adapter/container-format';
-import type { AnnotationGroup, AnnotationItem } from '@/addon/annotations/domain/model/annotation';
+import type { AnnotationGroup, AnnotationItem } from '@/addon/annotation/domain/model/annotation';
 
 /** The ontobdc command the annotation listeners chain: a result is recognized by the command it answers. */
 export const ANNOTATION_LIST_COMMAND = 'ontobdc annotate --list';

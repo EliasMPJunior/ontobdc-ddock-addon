@@ -1,5 +1,5 @@
-import { GeometrySurface, type Selection } from '@/addon/annotations/adapter/geometry-surface';
-import type { SavedGeometry, Shape, ShapeRequest } from '@/addon/annotations/domain/model/geometry-tool';
+import { GeometrySurface, type Selection } from '@/addon/annotation/adapter/geometry-surface';
+import type { SavedGeometry, Shape, ShapeRequest } from '@/addon/annotation/domain/model/geometry-tool';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 import type { SpacePoint, SpaceView } from '@/ontobdc/shared/domain/model/document-space';
 

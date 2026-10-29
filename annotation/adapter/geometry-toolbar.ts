@@ -1,4 +1,4 @@
-import { DEFAULT_STYLE, STROKE_WIDTHS, type GeometryStyle, type Shape } from '@/addon/annotations/domain/model/geometry-tool';
+import { DEFAULT_STYLE, STROKE_WIDTHS, type GeometryStyle, type Shape } from '@/addon/annotation/domain/model/geometry-tool';
 import { DELETE_ICON } from '@/ontobdc/shared/adapter/menu-icons';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 import { translate, type MessageKey } from '@/ontobdc/shared/plugin/i18n';

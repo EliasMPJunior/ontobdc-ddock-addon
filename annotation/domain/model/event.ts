@@ -1,5 +1,5 @@
-import type { AnnotationGroup } from '@/addon/annotations/domain/model/annotation';
-import type { GeometryStyle, SavedGeometry, Shape, ShapeRequest } from '@/addon/annotations/domain/model/geometry-tool';
+import type { AnnotationGroup } from '@/addon/annotation/domain/model/annotation';
+import type { GeometryStyle, SavedGeometry, Shape, ShapeRequest } from '@/addon/annotation/domain/model/geometry-tool';
 
 /**
  * The events of the Annotations addon and the data each one carries. The addon

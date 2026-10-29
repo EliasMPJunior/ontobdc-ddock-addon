@@ -1,4 +1,4 @@
-import { ANNOTATION_LIST_COMMAND } from '@/addon/annotations/adapter/annotation-format';
+import { ANNOTATION_LIST_COMMAND } from '@/addon/annotation/adapter/annotation-format';
 import { eventBus, type AppEvent } from '@/ontobdc/shared/adapter/event-bus';
 import type { AppEventMap } from '@/ontobdc/shared/domain/model/event';
 import type { ListenerMetadata } from '@/ontobdc/shared/domain/model/listener';

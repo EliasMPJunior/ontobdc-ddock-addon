@@ -1,5 +1,5 @@
-import { wktPath } from '@/addon/annotations/adapter/wkt-path';
-import type { SavedGeometry } from '@/addon/annotations/domain/model/geometry-tool';
+import { wktPath } from '@/addon/annotation/adapter/wkt-path';
+import type { SavedGeometry } from '@/addon/annotation/domain/model/geometry-tool';
 
 const SVG = 'http://www.w3.org/2000/svg';
 

@@ -1,7 +1,7 @@
-import { drawGeometries, markSelected } from '@/addon/annotations/adapter/geometry-render';
-import { GeometrySurface, type Selection } from '@/addon/annotations/adapter/geometry-surface';
-import { shapeArguments } from '@/addon/annotations/adapter/shape-arguments';
-import type { ImagePoint, SavedGeometry, Shape, ShapeRequest } from '@/addon/annotations/domain/model/geometry-tool';
+import { drawGeometries, markSelected } from '@/addon/annotation/adapter/geometry-render';
+import { GeometrySurface, type Selection } from '@/addon/annotation/adapter/geometry-surface';
+import { shapeArguments } from '@/addon/annotation/adapter/shape-arguments';
+import type { ImagePoint, SavedGeometry, Shape, ShapeRequest } from '@/addon/annotation/domain/model/geometry-tool';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 
 const SOURCE = 'annotations_geometry_canvas';

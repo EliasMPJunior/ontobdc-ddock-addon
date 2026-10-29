@@ -1,4 +1,4 @@
-import { annotationClearGeometryCommand, ANNOTATION_ENTITY_TYPE } from '@/addon/annotations/adapter/annotation-format';
+import { annotationClearGeometryCommand, ANNOTATION_ENTITY_TYPE } from '@/addon/annotation/adapter/annotation-format';
 import { failureMessage, quoted, requestCommand } from '@/ontobdc/shared/adapter/command-request';
 import { EntityRepository } from '@/ontobdc/shared/adapter/entity-repository';
 import { eventBus, type AppEvent } from '@/ontobdc/shared/adapter/event-bus';

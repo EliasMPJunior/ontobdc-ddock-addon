@@ -1,5 +1,5 @@
-import { contentOf } from '@/addon/annotations/adapter/annotation-format';
-import type { SavedGeometry } from '@/addon/annotations/domain/model/geometry-tool';
+import { contentOf } from '@/addon/annotation/adapter/annotation-format';
+import type { SavedGeometry } from '@/addon/annotation/domain/model/geometry-tool';
 import { failureMessage, requestCommand } from '@/ontobdc/shared/adapter/command-request';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 

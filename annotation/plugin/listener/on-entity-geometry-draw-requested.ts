@@ -1,4 +1,4 @@
-import { ANNOTATION_ENTITY_TYPE } from '@/addon/annotations/adapter/annotation-format';
+import { ANNOTATION_ENTITY_TYPE } from '@/addon/annotation/adapter/annotation-format';
 import { documentImageRenderer } from '@/ontobdc/shared/adapter/document-image';
 import { documentSpace } from '@/ontobdc/shared/adapter/document-space';
 import { documentPath } from '@/ontobdc/shared/adapter/document-iri';

@@ -1,5 +1,5 @@
-import { ANNOTATION_ENTITY_TYPE } from '@/addon/annotations/adapter/annotation-format';
-import { setAnnotationDataset } from '@/addon/annotations/adapter/annotation-dataset';
+import { ANNOTATION_ENTITY_TYPE } from '@/addon/annotation/adapter/annotation-format';
+import { setAnnotationDataset } from '@/addon/annotation/adapter/annotation-dataset';
 import type { AppEvent } from '@/ontobdc/shared/adapter/event-bus';
 import type { AppEventMap } from '@/ontobdc/shared/domain/model/event';
 import type { ListenerMetadata } from '@/ontobdc/shared/domain/model/listener';

@@ -1,10 +1,10 @@
-import { DEFAULT_SOLID_STYLE, SHAPES_2D, SHAPES_3D, type SavedGeometry } from '@/addon/annotations/domain/model/geometry-tool';
-import { composeView } from '@/addon/annotations/adapter/compose-view';
-import { GeometryCanvas } from '@/addon/annotations/adapter/geometry-canvas';
-import { GeometryToolbar } from '@/addon/annotations/adapter/geometry-toolbar';
-import type { GeometrySurface } from '@/addon/annotations/adapter/geometry-surface';
-import { keepSpaceShot } from '@/addon/annotations/adapter/space-shot-cache';
-import { SpaceCanvas } from '@/addon/annotations/adapter/space-canvas';
+import { DEFAULT_SOLID_STYLE, SHAPES_2D, SHAPES_3D, type SavedGeometry } from '@/addon/annotation/domain/model/geometry-tool';
+import { composeView } from '@/addon/annotation/adapter/compose-view';
+import { GeometryCanvas } from '@/addon/annotation/adapter/geometry-canvas';
+import { GeometryToolbar } from '@/addon/annotation/adapter/geometry-toolbar';
+import type { GeometrySurface } from '@/addon/annotation/adapter/geometry-surface';
+import { keepSpaceShot } from '@/addon/annotation/adapter/space-shot-cache';
+import { SpaceCanvas } from '@/addon/annotation/adapter/space-canvas';
 import { ContainerFileRepository } from '@/ontobdc/shared/adapter/container-file-repository';
 import { ContainerRepository } from '@/ontobdc/shared/adapter/container-repository';
 import { documentSpace } from '@/ontobdc/shared/adapter/document-space';

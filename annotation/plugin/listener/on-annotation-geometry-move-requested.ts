@@ -1,5 +1,5 @@
-import { annotationMoveGeometryCommand } from '@/addon/annotations/adapter/annotation-format';
-import { changeGeometries } from '@/addon/annotations/adapter/geometry-change';
+import { annotationMoveGeometryCommand } from '@/addon/annotation/adapter/annotation-format';
+import { changeGeometries } from '@/addon/annotation/adapter/geometry-change';
 import { quoted } from '@/ontobdc/shared/adapter/command-request';
 import type { AppEvent } from '@/ontobdc/shared/adapter/event-bus';
 import type { AppEventMap } from '@/ontobdc/shared/domain/model/event';

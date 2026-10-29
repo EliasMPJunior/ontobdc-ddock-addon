@@ -1,4 +1,4 @@
-import { AnnotationSurfaceGenerationMachine } from '@/addon/annotations/plugin/machine/annotation_surface_generation/machine';
+import { AnnotationSurfaceGenerationMachine } from '@/addon/annotation/plugin/machine/annotation_surface_generation/machine';
 import { eventBus, type AppEvent } from '@/ontobdc/shared/adapter/event-bus';
 import { failureMessage } from '@/ontobdc/shared/adapter/command-request';
 import type { AppEventMap } from '@/ontobdc/shared/domain/model/event';

@@ -1,5 +1,5 @@
 import { documentSpace } from '@/ontobdc/shared/adapter/document-space';
-import { GeometryOverlay } from '@/addon/annotations/adapter/geometry-overlay';
+import { GeometryOverlay } from '@/addon/annotation/adapter/geometry-overlay';
 import { eventBus, type AppEvent } from '@/ontobdc/shared/adapter/event-bus';
 import type { AppEventMap } from '@/ontobdc/shared/domain/model/event';
 import type { ListenerMetadata } from '@/ontobdc/shared/domain/model/listener';

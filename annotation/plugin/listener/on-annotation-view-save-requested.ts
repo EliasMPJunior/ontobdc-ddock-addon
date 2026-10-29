@@ -1,4 +1,4 @@
-import { annotationViewCommand } from '@/addon/annotations/adapter/annotation-format';
+import { annotationViewCommand } from '@/addon/annotation/adapter/annotation-format';
 import { failureMessage, quoted, requestCommand } from '@/ontobdc/shared/adapter/command-request';
 import { eventBus, type AppEvent } from '@/ontobdc/shared/adapter/event-bus';
 import type { AppEventMap } from '@/ontobdc/shared/domain/model/event';

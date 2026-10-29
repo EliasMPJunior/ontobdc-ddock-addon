@@ -1,4 +1,4 @@
-import type { ImagePoint, Shape } from '@/addon/annotations/domain/model/geometry-tool';
+import type { ImagePoint, Shape } from '@/addon/annotation/domain/model/geometry-tool';
 
 /** Least size of a gesture, in the pixels of the image: a smaller one is a click, not a shape. */
 const MIN_PIXELS = 2;
