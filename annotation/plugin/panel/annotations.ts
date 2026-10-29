@@ -2,7 +2,7 @@ import { ANNOTATION_ENTITY_TYPE, annotationDataset } from '@/addon/annotation/ad
 import { groupLabel, isClosed } from '@/addon/annotation/adapter/annotation-format';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 import { documentImageRenderer } from '@/ontobdc/shared/adapter/document-image';
-import { DRAW_ICON, EXPORT_ICON, NEW_ICON, OPEN_ICON } from '@/ontobdc/shared/adapter/menu-icons';
+import { DELETE_ICON, DRAW_ICON, EXPORT_ICON, NEW_ICON, OPEN_ICON } from '@/ontobdc/shared/adapter/menu-icons';
 import { createMoreMenu } from '@/ontobdc/shared/adapter/more-menu';
 import { ContainerRepository } from '@/ontobdc/shared/adapter/container-repository';
 import type { Mountable } from '@/ontobdc/shared/adapter/view';
@@ -142,6 +142,7 @@ export default function makeAnnotations(): Mountable {
         {
           id: 'delete',
           label: translate('entity.action.delete'),
+          icon: DELETE_ICON,
           ...(writable() ? {} : { disabledReason: translate('container.readOnly') }),
           run: () => eventBus.publish('presentation.annotations.item.delete.requested', SOURCE, { id: annotation.id, title: annotation.title }),
         },
