@@ -1,5 +1,6 @@
 import { ANNOTATION_ENTITY_TYPE, annotationDataset } from '@/addon/annotation/adapter/annotation-dataset';
 import { groupLabel, isClosed } from '@/addon/annotation/adapter/annotation-format';
+import { activeEntityId } from '@/ontobdc/shared/adapter/active-panel';
 import { eventBus } from '@/ontobdc/shared/adapter/event-bus';
 import { documentImageRenderer } from '@/ontobdc/shared/adapter/document-image';
 import { DELETE_ICON, DRAW_ICON, EXPORT_ICON, NEW_ICON, OPEN_ICON } from '@/ontobdc/shared/adapter/menu-icons';
@@ -58,6 +59,8 @@ export default function makeAnnotations(): Mountable {
   const exporting = new Set<string>();
   const moreMenu = createMoreMenu();
   let selected: HTMLLIElement | null = null;
+  /** The global id of the entity the active tab of the surface shows, null when it shows none. */
+  let shown: string | null = activeEntityId();
 
   /** Whether the open container can be written to; deleting and exporting need it. */
   const writable = (): boolean => ContainerRepository.getInstance().get()?.access === 'readwrite';
@@ -68,6 +71,22 @@ export default function makeAnnotations(): Mountable {
     empty.dataset.i18n = 'annotations.empty';
     empty.textContent = translate('annotations.empty');
     return empty;
+  };
+
+  /**
+   * Marks, in the list, the annotation the active tab shows. With `reveal`, the group that lists it is the one open,
+   * so that it is seen.
+   */
+  const markShown = (reveal: boolean): void => {
+    root.querySelectorAll('.tree-node.tab-active').forEach((row) => row.classList.remove('tab-active'));
+    const row = shown === null ? undefined : [...root.querySelectorAll<HTMLElement>('.tree-node.annotation')].find((candidate) => candidate.dataset.id === shown);
+    if (!row) return;
+    row.classList.add('tab-active');
+    const section = row.closest<HTMLDetailsElement>('details');
+    if (!reveal || !section || section.open) return;
+    for (const sibling of root.querySelectorAll<HTMLDetailsElement>(':scope > details')) sibling.open = false;
+    section.open = true;
+    openGroup = section.dataset.group ?? openGroup;
   };
 
   const select = (item: HTMLLIElement): void => {
@@ -318,6 +337,8 @@ export default function makeAnnotations(): Mountable {
     }
     root.replaceChildren(...sections);
     applyTranslations(root);
+    // The list was drawn again: what the active tab shows is marked in it again.
+    markShown(false);
   };
 
   render();
@@ -345,6 +366,12 @@ export default function makeAnnotations(): Mountable {
     }),
     eventBus.subscribe('presentation.annotations.group.export.failed', ({ payload }) => {
       if (payload?.group) markExporting(payload.group, false);
+    }),
+    // The annotation the tab that becomes active shows is marked in the list, so that it is there when the person comes back to it.
+    eventBus.subscribe('presentation.main.panel.activated', ({ payload }) => {
+      if (payload?.container !== 'surface') return;
+      shown = payload.kind === 'entity' ? payload.entityId ?? null : null;
+      markShown(true);
     }),
     onLocaleChange(render),
   ];
